@@ -1,0 +1,141 @@
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Gilroy-Bold;
+}
+:root {
+    --dark-orange: #F78411;
+    --orange: orange;
+    --blue: #1C32A0;
+}
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url(../fonts/Gilroy-ExtraBold.otf);
+}
+@font-face {
+    font-family: Gilroy-Thin;
+    src: url(../fonts/Gilroy-Light.otf);
+}
+body {
+    font-family: Gilroy-Bold;
+}
+.container {
+    width: 100%;
+    max-width: 1186px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+.header {
+    height: 20vh;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+}
+.header__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__list-item {
+    padding: 0px 26px;
+}
+.header__list-link {
+    color: black;
+    font-size: 16px;
+    font-family: Gilroy-Thin;
+    font-weight: bolder;
+    position: relative;
+    transition: .2s;
+}
+.header__list-link:hover {
+    color: var(--dark-orange);
+}
+.header__list-link::before {
+    transition: .4s;
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    background: var(--dark-orange);
+    top: 28px;
+}
+.header__list-link:hover::before {
+    right: 0;
+    left: 0;
+    height: 3px;
+    content: '';
+    width: 100%;
+}
+.header__list-link--number {
+    color: var(--dark-orange);
+}
+.btn {
+    display: flex;
+    align-items: center;
+    color: white;
+    background: var(--dark-orange);
+    font-family: Gilroy-Thin;
+    font-weight: bolder;
+    border-radius: 6px;
+    padding: 4px 30px;
+    text-align: center;
+}
+.home__inner {
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between;
+}
+.row {
+    display: flex;
+}
+.col {
+    flex: 1;
+}
+.home__title {
+    font-weight: lighter !important;
+    color: #333333;
+    margin-top: 30px;
+    font-size: 48px;
+}
+.home__text {
+    font-size: 22px;
+    font-family: Gilroy-Thin;
+    font-weight: 600;
+    margin-top: 14px;
+    line-height: 1.4;
+    color: #262626;
+}
+.home__form {
+    display: flex;
+    margin-top: 40px;
+}
+.home__inp {
+    width: 100%;
+    max-width: 270px;
+    height: 50px;
+    padding: 8px;
+    font-size: 14px;
+    font-family: Gilroy-Thin;
+    font-weight: 800;
+    border-radius: 8px;
+    border: 1px solid gray;
+    margin-right: 14px;
+    flex: 1;
+}
+.home__btn {
+    width: 100%;
+    min-width: 180px;
+    max-width: 180px;
+    flex: 1;
+}
+.home__block-img {
+    width: 100%;
+    max-width: 585px;
+    height: 470px;
+}
